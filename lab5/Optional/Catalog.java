@@ -31,11 +31,19 @@ public class Catalog implements Serializable {
         return this.path;
     }
 
-    public Iterable<? extends CharSequence> allData(){
+    public String getDocumentNames()
+    {
+        String ret = "";
+        for (Document d : documents)
+            ret += d.getId() + "\n";
+        return ret;
+    }
+
+    public String allData(){
         String ret = name + "\n" + path + "\n";
         for (Document d : documents)
-            ret += documents + "\n";
-        return Collections.singleton(ret);
+            ret += d + "\n";
+        return ret;
     }
 
     public String getName() {

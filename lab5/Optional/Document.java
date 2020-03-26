@@ -15,13 +15,9 @@ public class Document implements Serializable {
         this.location = location;
     }
 
-    public Document() {
+    public Document() {   }
 
-    }
-
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
 
     public String getLocation() {
         return location;
@@ -46,9 +42,10 @@ public class Document implements Serializable {
 
     @Override
     public String toString() {
-        return  '\n'+
+        return  "[\n"+
                 id + '\n' +
                 name + '\n' +
-                location + '\n';
+                location + '\n' +
+                "]";
     }
 }
